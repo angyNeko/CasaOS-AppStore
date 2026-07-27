@@ -186,7 +186,7 @@ x-casaos:
     - "386"
     - arm
   main: pihole
-  author: CasaOS Team
+  author: angyNeko
   category: Networking
   description:
     en_US: |
@@ -456,7 +456,7 @@ x-casaos:
       - [Официальный Сайт Pi-hole](https://pi-hole.net/)
       - [Pi-hole GitHub](https://github.com/pi-hole/pi-hole)
     tr_TR: |
-      Pi-hole, istemci tarafı yazılım gerektirmeden cihazları istenmeyen içerikten korumak için DNS sinkhole teknolojisini kullanan Linux donanımı için ağ çapında reklam engelleme platformudur. Ev veya kurumsal ağlar için tasarlanmış olup, verimli reklam engelleme ve ağ optimizasyonu sunar.
+      Pi-hole, istemci 64tarafı yazılım gerektirmeden cihazları istenmeyen içerikten korumak için DNS sinkhole teknolojisini kullanan Linux donanımı için ağ çapında reklam engelleme platformudur. Ev veya kurumsal ağlar için tasarlanmış olup, verimli reklam engelleme ve ağ optimizasyonu sunar.
 
       Temel özellikler ağ çapında reklam engelleme ve tarayıcı olmayan ortamlarda içerik engellemeyi içerir. Reklamları engellemek için DNS sinkhole kullanır, mobil uygulamaları ve akıllı TV'leri kapsar. DNS sorgularını önbelleğe alma günlük gezinmeyi hızlandırır. Komut satırı arayüzü güvenilir kontrol seçenekleriyle birlikte işlerlik sağlar.
 
@@ -531,7 +531,7 @@ x-casaos:
       tr_TR: |
         Varsayılan şifre: `casaos`
   title:
-    en_US: Pi-hole
+    en_US: Pi-hole 256M
   index: /admin
   port_map: "8800"
   version: "2026.5.0"
