@@ -474,7 +474,8 @@ x-casaos:
       **Daha Fazla Bilgi:**
       - [Pi-hole Resmi Web Sitesi](https://pi-hole.net/)
       - [Pi-hole GitHub](https://github.com/pi-hole/pi-hole)
-  developer: Pi-hole
+  developer: angyNeko
+  require_memory: 256M
   icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/icon.svg
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/screenshot-1.jpg
