@@ -187,7 +187,7 @@ x-casaos:
     - arm
   main: pihole
   author: angyNeko
-  category: Networking
+  category: angyNeko
   description:
     en_US: |
       Pi-hole is a network-wide ad-blocking platform for Linux hardware, using DNS sinkhole technology to protect devices from unwanted content without requiring client-side software. Designed for home or enterprise networks, it offers efficient ad blocking and network optimization.
