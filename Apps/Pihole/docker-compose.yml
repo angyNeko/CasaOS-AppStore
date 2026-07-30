@@ -10,6 +10,8 @@ services:
       resources:
         reservations:
           memory: 256M
+        limits:
+          memory: 256M
     network_mode: bridge
     ports:
       - target: 80
