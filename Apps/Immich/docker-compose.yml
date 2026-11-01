@@ -1,5 +1,6 @@
+name: immich
 networks:
-  immich_network:
+  big_bear_immich_network:
     driver: bridge
 services:
   database:
@@ -11,7 +12,7 @@ services:
       POSTGRES_USER: casaos
     image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0@sha256:bcf63357191b76a916ae5eb93464d65c07511da41e3bf7a8416db519b40b1c23
     networks:
-      - immich_network
+      - big_bear_immich_network
     restart: unless-stopped
     volumes:
       - /DATA/AppData/$AppID/pgdata:/var/lib/postgresql/data
@@ -36,7 +37,7 @@ services:
   immich-machine-learning:
     container_name: immich-machine-learning
     environment:
-      DB_DATABASE_NAME: casaos
+      DB_DATABASE_NAME: immich
       DB_HOSTNAME: immich-postgres
       DB_PASSWORD: casaos
       DB_PORT: 5432
@@ -44,7 +45,7 @@ services:
       REDIS_HOSTNAME: immich-redis
     image: ghcr.io/immich-app/immich-machine-learning:v3
     networks:
-      - immich_network
+      - big_bear_immich_network
     restart: unless-stopped
     volumes:
       - /DATA/AppData/$AppID/model-cache:/cache
@@ -87,7 +88,7 @@ services:
       REDIS_HOSTNAME: immich-redis
     image: ghcr.io/immich-app/immich-server:v3
     networks:
-      - immich_network
+      - big_bear_immich_network
     ports:
       - 2283:2283
     restart: unless-stopped
@@ -130,7 +131,7 @@ services:
     container_name: immich-redis
     image: docker.io/valkey/valkey:9@sha256:418652cfb58ef879d4978c33553735d7147016032d5aefaa14c828e611eb9dfd
     networks:
-      - immich_network
+      - big_bear_immich_network
     restart: always
     volumes: []
 x-casaos:
@@ -148,12 +149,10 @@ x-casaos:
   index: /
   main: immich-server
   port_map: "2283"
-  repo_id: github.com@ccc18c81
   scheme: http
   store_app_id: big-bear-immich
   tagline:
     en_US: Immich
-  thumbnail: ""
   title:
     custom: Immich
     en_US: Immich
