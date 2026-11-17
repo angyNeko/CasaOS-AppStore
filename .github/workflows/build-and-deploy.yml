@@ -1,0 +1,33 @@
+name: Build v2 App Store & Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Build v2 store metadata into dist/ ───────────────────
+      - name: Build App Store metadata
+        uses: IceWhaleTech/build-appstore-action@main
+        with:
+          output: dist
+          base-url: https://angyneko.github.io/CasaOS-AppStore
+
+      # ── 3. Deploy dist/ to GitHub Pages (gh-pages branch) ───────
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true

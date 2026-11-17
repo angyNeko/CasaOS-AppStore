@@ -1,3 +1,4 @@
+name: aerofoil
 services:
   aerofoil:
     container_name: aerofoil

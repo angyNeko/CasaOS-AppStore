@@ -71,5 +71,7 @@ x-casaos:
     en_US: Open-source DocuSign alternative.
   title:
     en_US: DocuSeal
+  id: com.docuseal.docuseal
   index: /
   port_map: "20766"
+  scheme: http
